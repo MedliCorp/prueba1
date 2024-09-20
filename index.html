@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEDLI LOGISTICS</title>
+    <style>
+        
+        #contenido {
+            display: none;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            text-align: center; 
+        }
+
+   
+        #logo {
+            position: absolute;
+            top: 50px;
+            left: -50vw;
+            width: 50vw; 
+            max-width: 500px; 
+            min-width: 200px; 
+        }
+
+    
+        @keyframes bounceIn {
+            0% {
+                left: -50vw;
+                top: 10vh;
+                opacity: 0;
+            }
+            50% {
+                left: 50%;
+                transform: translateX(-50%);
+                top: 50vh;
+                opacity: 1;
+            }
+            70% {
+                top: 30vh; 
+            }
+            80% {
+                top: 45vh; 
+            }
+            90% {
+                top: 35vh; 
+            }
+            100% {
+                top: 10vh; 
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+
+    
+        #logo.animate {
+            animation: bounceIn 3s cubic-bezier(0.28, 0.84, 0.42, 1) forwards;
+        }
+
+    
+        @media screen and (max-width: 768px) {
+            #logo {
+                width: 70vw; 
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            #logo {
+                width: 80vw; 
+            }
+
+            #contenido {
+                padding: 20px; 
+            }
+        }
+    </style>
+</head>
+<body>
+
+<img src="img/Logo.png" id="logo" alt="Logo">
+
+<div id="contenido">
+    <h1>Bienvenidos a MEDLI LOGISTICS</h1>
+    <p>Tu contenido aquí...</p>
+</div>
+
+<script>
+   
+    window.onload = function() {
+        var logo = document.getElementById("logo");
+        var contenido = document.getElementById("contenido");
+
+        
+        logo.classList.add("animate");
+        
+        setTimeout(function() {
+            contenido.style.display = "block";
+            contenido.style.opacity = 1; 
+        }, 3000); 
+    }
+</script>
+
+</body>
+</html>
