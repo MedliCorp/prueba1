@@ -9,7 +9,7 @@
        
 
         /* Estilos para pantallas medianas y grandes (tablets y computadoras) */
-        @media screen and (min-width: 500px) {
+        @media screen and (min-width: 300px) {
             header {
                 background-image: url('viaje-small.jpg'); /* Imagen de fondo para móviles */
                 background-size: cover;
