@@ -9,7 +9,7 @@
        
 
         /* Estilos para pantallas medianas y grandes (tablets y computadoras) */
-        @media screen and (min-width: 200px) {
+        @media screen and (min-width: 200px ) {
             header {
                 background-image: url('viaje-small.jpg'); /* Imagen de fondo para móviles */
                 background-size: cover;
@@ -36,7 +36,7 @@
                 left: 20px;
                 cursor: pointer;
                 width: 50px;
-                top: 15%;
+                top: 17%;
                 z-index: 10; /* Asegura que el camión esté sobre la barra de navegación */
                 transition: left 1s ease; /* Transición suave del camión al cerrar */
             }
@@ -48,7 +48,7 @@ nav {
     bottom: 20px;
     left: 20px;
     height: 50px;
-    top: 15%;
+    top: 17%;
     width: 0; /* Oculta inicialmente */
     background-color: #008086; /* Color principal */
     display: flex;
