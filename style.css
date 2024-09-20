@@ -9,7 +9,7 @@
        
 
         /* Estilos para pantallas medianas y grandes (tablets y computadoras) */
-        @media screen and (min-width: 768px) {
+        @media screen and (min-width: 500px) {
             header {
                 background-image: url('viaje-small.jpg'); /* Imagen de fondo para móviles */
                 background-size: cover;
@@ -18,6 +18,7 @@
                 flex: 1;
                 justify-content: center;
                 align-items: center;
+                text-align: center;
             
             }
     
@@ -28,7 +29,129 @@
                 padding: 20px;
                 text-align: center;
             }
+            .truck-icon {
+                position: absolute;
+                bottom: 20px;
+                left: 20px;
+                cursor: pointer;
+                width: 50px;
+                top: 15%;
+                z-index: 10; /* Asegura que el camión esté sobre la barra de navegación */
+                transition: left 1s ease; /* Transición suave del camión al cerrar */
+            }
+    
+            /* Barra de navegación oculta */
+           /* Estilos generales de la barra de navegación */
+nav {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    height: 50px;
+    top: 15%;
+    width: 0; /* Oculta inicialmente */
+    background-color: #008086; /* Color principal */
+    display: flex;
+    align-items: center;
+    transition: width 1s ease; /* Transición suave */
+    overflow: hidden;
+    z-index: 5; /* Aparece detrás del camión */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra */
+}
+
+/* Estilo de la lista */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+/* Estilo de los elementos de la lista */
+nav ul li {
+    margin: 0 15px;
+    position: relative; /* Para el efecto de subrayado */
+}
+
+/* Estilo de los enlaces */
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 10px 15px; 
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+
+nav ul li a:hover {
+ 
+    color: #FFD700; 
+}
+
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: #FFD700;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+            /* Estilos del camión animado */
+            .move-truck {
+                animation: drive 1s forwards ease-in-out;
+            }
+    
+            .move-truck-back {
+                animation: driveBack 1s forwards ease-in-out;
+            }
+    
+            /* Keyframes para el movimiento del camión hacia adelante */
+            @keyframes drive {
+                from {
+                    left: 20px;
+                }
+                to {
+                    left: 300px; /* El camión avanza */
+                }
+            }
+    
+            /* Keyframes para el movimiento del camión hacia atrás */
+            @keyframes driveBack {
+                from {
+                    left: 300px;
+                }
+                to {
+                    left: 20px; /* El camión vuelve a su posición original */
+                }
+            }
         }
+
+
+
+
+
+
+
+
+
+
+/* version pc*/
+
+
+
+
+
+
         @media screen and (min-width: 1024px) {
             header {
                 background-image: url('viaje-small.jpg'); /* Imagen de fondo para móviles */
@@ -38,6 +161,7 @@
                 flex: 1;
                 justify-content: center;
                 align-items: center;
+                text-align: center;
             
             }
     
@@ -48,5 +172,110 @@
                 padding: 20px;
                 text-align: center;
             }
-           
+            .truck-icon {
+                position: absolute;
+                bottom: 20px;
+                left: 20px;
+                top: 10%;
+                cursor: pointer;
+                width: 50px;
+                z-index: 10; 
+                transition: left 1s ease;
+            }
+    
+            /* Barra de navegación oculta */
+           /* Estilos generales de la barra de navegación */
+nav {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    height: 50px;
+    top: 10%;
+    width: 0; /* Oculta inicialmente */
+    background-color: #008086; /* Color principal */
+    display: flex;
+    align-items: center;
+    transition: width 1s ease; /* Transición suave */
+    overflow: hidden;
+    z-index: 5; /* Aparece detrás del camión */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra */
+}
+
+/* Estilo de la lista */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+/* Estilo de los elementos de la lista */
+nav ul li {
+    margin: 0 15px;
+    position: relative; /* Para el efecto de subrayado */
+}
+
+/* Estilo de los enlaces */
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 10px 15px; /* Espaciado interno */
+    transition: background-color 0.3s, color 0.3s; /* Transiciones suaves */
+}
+
+/* Efecto de hover en los enlaces */
+nav ul li a:hover {
+
+    color: #FFD700; /* Color dorado para el texto */
+}
+
+/* Efecto de subrayado con pseudo-elemento */
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: #FFD700; /* Color dorado para el subrayado */
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+    
+            /* Estilos del camión animado */
+            .move-truck {
+                animation: drive 1s forwards ease-in-out;
+            }
+    
+            .move-truck-back {
+                animation: driveBack 1s forwards ease-in-out;
+            }
+    
+            /* Keyframes para el movimiento del camión hacia adelante */
+            @keyframes drive {
+                from {
+                    left: 20px;
+                }
+                to {
+                    left: 300px; /* El camión avanza */
+                }
+            }
+    
+            /* Keyframes para el movimiento del camión hacia atrás */
+            @keyframes driveBack {
+                from {
+                    left: 300px;
+                }
+                to {
+                    left: 20px; /* El camión vuelve a su posición original */
+                }
+            }
         }

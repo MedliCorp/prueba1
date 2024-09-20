@@ -5,22 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Explore the World - Agencia de Viajes</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+      
+
+    </style>
 </head>
 <body>
 
 <header>
-    <h1>Explora el Mundo</h1>
+    <img src="img/Logo.png" alt="Logo de la Agencia">
+    <img src="img/Truck_Right_Green_26320.png" id="truck-icon" class="truck-icon" alt="Icono del Camión">
 </header>
 
 
-<div class="content">
-   <img src="img/Logo.png" alt="">
+<nav id="nav-bar">
+    <ul>
+        <li><a href="#destinos">Destinos</a></li>
+        <li><a href="#ofertas">Ofertas</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+    </ul>
+</nav>
 
-</div>
 
+
+<br><br><br>
 <footer>
-    <p>© 2024 Medli </p>
+    <p>© 2024 Medli</p>
 </footer>
+
+<script>
+ 
+    const truck = document.getElementById('truck-icon');
+    const navBar = document.getElementById('nav-bar');
+    let isOpen = false; 
+
+    truck.addEventListener('click', () => {
+        if (!isOpen) {
+           
+            truck.classList.remove('move-truck-back');
+            truck.classList.add('move-truck');
+            navBar.style.width = '400px'; 
+        } else {
+            
+            truck.classList.remove('move-truck');
+            truck.classList.add('move-truck-back');
+            navBar.style.width = '0'; 
+        }
+        isOpen = !isOpen; 
+    });
+</script>
 
 </body>
 </html>
