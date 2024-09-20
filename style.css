@@ -9,7 +9,7 @@
        
 
         /* Estilos para pantallas medianas y grandes (tablets y computadoras) */
-        @media screen and (min-width: 300px) {
+        @media screen and (min-width: 200px) {
             header {
                 background-image: url('viaje-small.jpg'); /* Imagen de fondo para móviles */
                 background-size: cover;
@@ -28,6 +28,7 @@
                 color: white;
                 padding: 20px;
                 text-align: center;
+            
             }
             .truck-icon {
                 position: absolute;
@@ -79,7 +80,7 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 1.2em;
-    
+    padding: 10px 15px; 
     transition: background-color 0.3s, color 0.3s; 
 }
 
@@ -171,6 +172,7 @@ nav ul li a:hover::after {
                 color: white;
                 padding: 20px;
                 text-align: center;
+                
             }
             .truck-icon {
                 position: absolute;
@@ -265,14 +267,14 @@ nav ul li a:hover::after {
                     left: 20px;
                 }
                 to {
-                    left: 300px; /* El camión avanza */
+                    left: 410px; /* El camión avanza */
                 }
             }
     
             /* Keyframes para el movimiento del camión hacia atrás */
             @keyframes driveBack {
                 from {
-                    left: 300px;
+                    left: 410px;
                 }
                 to {
                     left: 20px; /* El camión vuelve a su posición original */
