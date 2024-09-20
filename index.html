@@ -16,6 +16,9 @@
     <img src="img/Logo.png" alt="Logo de la Agencia">
     <img src="img/Truck_Right_Green_26320.png" id="truck-icon" class="truck-icon" alt="Icono del Camión">
 </header>
+<body>
+    <img src="img/Captura de pantalla 2024-09-20 165330.png" id="info">
+</body>
 
 
 <nav id="nav-bar">
@@ -29,7 +32,7 @@
 
 
 
-<br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
 <footer id="hola">
     <p>© 2024 Medli</p>
 </footer>
@@ -38,11 +41,19 @@
  
     const truck = document.getElementById('truck-icon');
     const navBar = document.getElementById('nav-bar');
+    
     var hola=document.getElementById("hola");
     let isOpen = false; 
 
     truck.addEventListener('click', () => {
         var ancho=window.innerWidth;
+ 
+        if(ancho<=1023){
+                navBar.style.width = '70%'; 
+            }else{
+                navBar.style.width = '20%'; 
+            }
+
         if (!isOpen) {
            
             truck.classList.remove('move-truck-back');
