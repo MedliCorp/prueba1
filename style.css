@@ -236,3 +236,74 @@ footer {
         font-size: 1rem;
     }
 }
+/* Nueva sección: Sobre Nosotros */
+#about {
+    background-color: #f9f9f9;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+#about h2 {
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    color: #005f73;
+}
+
+.about-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem; /* Espacio entre las cards */
+}
+
+.about-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombras suaves para que destaquen */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 30%;
+    min-width: 250px; /* Tamaño mínimo para pantallas más pequeñas */
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.about-card:hover {
+    transform: translateY(-10px); /* Efecto de elevar la card al hacer hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombras más intensas al hacer hover */
+}
+
+.about-card h3 {
+    color: #94d2bd;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.about-card p {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Responsividad para la sección 'Sobre Nosotros' */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-card {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-card h3 {
+        font-size: 1.5rem;
+    }
+
+    .about-card p {
+        font-size: 0.9rem;
+    }
+}
