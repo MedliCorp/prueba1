@@ -1,292 +1,214 @@
- body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-       
-       
-
-        /* Estilos para pantallas medianas y grandes (tablets y computadoras) */
-        @media screen and (min-width: 200px ) {
-            header {
-                background-image: url('viaje-small.jpg'); /* Imagen de fondo para móviles */
-                background-size: cover;
-                background-position: center;
-                height: 2%;
-                flex: 1;
-                justify-content: center;
-                align-items: center;
-                text-align: center;
-            
-            }
-    
-           
-            footer {    
-                background-color: #333;
-                color: white;
-                padding: 20px;
-                text-align: center;
-            
-            }
-            .truck-icon {
-                position: absolute;
-                bottom: 20px;
-                left: 20px;
-                cursor: pointer;
-                width: 50px;
-                top: 17%;
-                z-index: 10; /* Asegura que el camión esté sobre la barra de navegación */
-                transition: left 1s ease; /* Transición suave del camión al cerrar */
-            }
-
-            #info{
-                position: absolute;
-                top: 24%;
-                width:  200px;
-                height: 100px;
-                left: 25%;
-
-            }
-    
-            /* Barra de navegación oculta */
-           /* Estilos generales de la barra de navegación */
-nav {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    height: 50px;
-    top: 17%;
-    width: 0; /* Oculta inicialmente */
-    background-color: #008086; /* Color principal */
-    display: flex;
-    align-items: center;
-    transition: width 1s ease; /* Transición suave */
-    overflow: hidden;
-    z-index: 5; /* Aparece detrás del camión */
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra */
-}
-
-/* Estilo de la lista */
-nav ul {
-    list-style-type: none;
-    padding: 0;
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Encabezado */
+header {
+    background-color: #005f73;
     display: flex;
+    justify-content: space-between;
     align-items: center;
+    padding: 1rem 2rem;
 }
 
-/* Estilo de los elementos de la lista */
+header .logo img {
+    max-width: 150px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
 nav ul li {
-    margin: 0 15px;
-    position: relative; /* Para el efecto de subrayado */
+    margin-left: 2rem;
 }
 
-/* Estilo de los enlaces */
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 1em;
-     
-    transition: background-color 0.3s, color 0.3s; 
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
-
 
 nav ul li a:hover {
- 
-    color: #FFD700; 
+    color: #94d2bd;
 }
 
-
-nav ul li a::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    bottom: -5px;
-    width: 0;
-    height: 2px;
-    background-color: #FFD700;
-    transition: width 0.3s ease, left 0.3s ease;
-}
-
-nav ul li a:hover::after {
-    width: 100%;
-    left: 0;
-}
-
-            /* Estilos del camión animado */
-            .move-truck {
-                animation: drive 1s forwards ease-in-out;
-            }
-    
-            .move-truck-back {
-                animation: driveBack 1s forwards ease-in-out;
-            }
-    
-            /* Keyframes para el movimiento del camión hacia adelante */
-            @keyframes drive {
-                from {
-                    left: 20px;
-                }
-                to {
-                    left: 300px; /* El camión avanza */
-                }
-            }
-    
-            /* Keyframes para el movimiento del camión hacia atrás */
-            @keyframes driveBack {
-                from {
-                    left: 300px;
-                }
-                to {
-                    left: 20px; /* El camión vuelve a su posición original */
-                }
-            }
-        }
-
-
-
-
-
-
-
-
-
-
-/* version pc*/
-
-
-
-
-
-
-        @media screen and (min-width: 1024px) {
-            header {
-                background-image: url('viaje-small.jpg'); /* Imagen de fondo para móviles */
-                background-size: cover;
-                background-position: center;
-                height: 2%;
-                flex: 1;
-                justify-content: center;
-                align-items: center;
-                text-align: center;
-            
-            }
-    
-           
-            footer {    
-                background-color: #333;
-                color: white;
-                padding: 20px;
-                text-align: center;
-                
-            }
-            .truck-icon {
-                position: absolute;
-                bottom: 20px;
-                left: 20px;
-                top: 10%;
-                cursor: pointer;
-                width: 50px;
-                z-index: 10; 
-                transition: left 1s ease;
-            }
-    
-            /* Barra de navegación oculta */
-           /* Estilos generales de la barra de navegación */
-nav {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    height: 50px;
-    top: 10%;
-    width: 0; /* Oculta inicialmente */
-    background-color: #008086; /* Color principal */
+/* Sección principal */
+.main-banner {
+    background-image: url('logistics-background.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    transition: width 1s ease; /* Transición suave */
-    overflow: hidden;
-    z-index: 5; /* Aparece detrás del camión */
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra */
-}
-
-/* Estilo de la lista */
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    align-items: center;
-}
-
-/* Estilo de los elementos de la lista */
-nav ul li {
-    margin: 0 15px;
-    position: relative; /* Para el efecto de subrayado */
-}
-
-/* Estilo de los enlaces */
-nav ul li a {
+    text-align: center;
     color: white;
-    text-decoration: none;
-    font-size: 1.2em;
-    padding: 10px 15px; /* Espaciado interno */
-    transition: background-color 0.3s, color 0.3s; /* Transiciones suaves */
+    padding: 0 20px;
 }
 
-/* Efecto de hover en los enlaces */
-nav ul li a:hover {
-
-    color: #FFD700; /* Color dorado para el texto */
+.main-banner h1 {
+    font-size: 3rem;
+    margin: 0;
 }
 
-/* Efecto de subrayado con pseudo-elemento */
-nav ul li a::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    bottom: -5px;
-    width: 0;
-    height: 2px;
-    background-color: #FFD700; /* Color dorado para el subrayado */
-    transition: width 0.3s ease, left 0.3s ease;
+.main-banner p {
+    font-size: 1.2rem;
 }
 
-nav ul li a:hover::after {
-    width: 100%;
-    left: 0;
+.btn-primary {
+    background-color: #94d2bd;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
 }
 
-    
-            /* Estilos del camión animado */
-            .move-truck {
-                animation: drive 1s forwards ease-in-out;
-            }
-    
-            .move-truck-back {
-                animation: driveBack 1s forwards ease-in-out;
-            }
-    
-            /* Keyframes para el movimiento del camión hacia adelante */
-            @keyframes drive {
-                from {
-                    left: 20px;
-                }
-                to {
-                    left: 410px; /* El camión avanza */
-                }
-            }
-    
-            /* Keyframes para el movimiento del camión hacia atrás */
-            @keyframes driveBack {
-                from {
-                    left: 410px;
-                }
-                to {
-                    left: 20px; /* El camión vuelve a su posición original */
-                }
-            }
-        }
+.btn-primary:hover {
+    background-color: #52b788;
+}
+
+/* Sección de servicios */
+#services {
+    background-color: #fff;
+    padding: 2rem;
+    text-align: center;
+}
+
+#services h2 {
+    margin-bottom: 2rem;
+}
+
+.service-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Flexbox para hacer que las tarjetas se acomoden en varias filas si es necesario */
+}
+
+.service-item {
+    background-color: #f4f4f4;
+    padding: 1.5rem;
+    border-radius: 8px;
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+.service-item h3 {
+    color: #005f73;
+}
+
+/* Sección de contacto */
+#contact {
+    background-color: #f1f1f1;
+    padding: 2rem;
+    text-align: center;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contact input, #contact textarea {
+    width: 80%;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#contact button {
+    padding: 0.8rem 2rem;
+    background-color: #94d2bd;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+#contact button:hover {
+    background-color: #52b788;
+}
+
+/* Pie de página */
+footer {
+    background-color: #005f73;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-top: 1rem;
+    }
+
+    .main-banner {
+        height: 60vh;
+    }
+
+    .main-banner h1 {
+        font-size: 2.5rem;
+    }
+
+    .service-container {
+        flex-direction: column; /* Apilar los servicios en una sola columna en pantallas pequeñas */
+    }
+
+    .service-item {
+        width: 80%; /* Aumentar el ancho de los elementos en pantallas más pequeñas */
+    }
+}
+
+/* Media Queries para pantallas muy pequeñas (móviles) */
+@media (max-width: 480px) {
+    header {
+        padding: 1rem;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+    }
+
+    .main-banner h1 {
+        font-size: 2rem;
+    }
+
+    .main-banner p {
+        font-size: 1rem;
+    }
+
+    .service-item {
+        width: 100%; /* Aumentar el ancho al 100% en pantallas muy pequeñas */
+    }
+
+    #contact input, #contact textarea {
+        width: 100%; /* Asegurar que los campos de formulario ocupen el 100% del ancho disponible */
+    }
+}

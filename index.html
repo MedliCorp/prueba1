@@ -3,77 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Explore the World - Agencia de Viajes</title>
+    <title>Medli Logistics</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-      
 
-    </style>
 </head>
 <body>
-
-<header>
-    <img src="img/Logo.png" alt="Logo de la Agencia">
-    <img src="img/Truck_Right_Green_26320.png" id="truck-icon" class="truck-icon" alt="Icono del Camión">
-</header>
-<body>
-    <img src="img/Captura de pantalla 2024-09-20 165330.png" id="info">
-</body>
-
-
-<nav id="nav-bar">
-    <ul>
-        <li><a href="#destinos">Destinos</a></li>
-        <li><a href="#ofertas">Ofertas</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-    </ul>
-</nav>
-
-
-
-
-<br><br><br><br><br><br><br><br><br><br>
-<footer id="hola">
-    <p>© 2024 Medli</p>
-</footer>
-
-<script>
- 
-    const truck = document.getElementById('truck-icon');
-    const navBar = document.getElementById('nav-bar');
     
-    var hola=document.getElementById("hola");
-    let isOpen = false; 
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Medli Logistics">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#services">Servicios</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    truck.addEventListener('click', () => {
-        var ancho=window.innerWidth;
- 
-        if(ancho<=1023){
-                navBar.style.width = '70%'; 
-            }else{
-                navBar.style.width = '20%'; 
-            }
+    <!-- Sección principal -->
+    <section id="home">
+        <div class="main-banner">
+            <h1>Medli Logistics</h1>
+            <p>"Cada trayecto una entrega segura y confiable"</p>
+            <a href="#contact" class="btn-primary">Contáctanos</a>
+        </div>
+    </section>
 
-        if (!isOpen) {
-           
-            truck.classList.remove('move-truck-back');
-            truck.classList.add('move-truck');
-           
-            if(ancho<=1023){
-                navBar.style.width = '70%'; 
-            }else{
-                navBar.style.width = '20%'; 
-            }
-            
-        } else {
-            
-            truck.classList.remove('move-truck');
-            truck.classList.add('move-truck-back');
-            navBar.style.width = '0'; 
-        }
-        isOpen = !isOpen; 
-    });
-</script>
+    <!-- Sección de servicios -->
+    <section id="services">
+        <h2>Nuestros Servicios</h2>
+        <div class="service-container">
+            <div class="service-item">
+                <h3>Transporte Nacional</h3>
+                <p>Ofrecemos soluciones de transporte seguras y eficientes dentro del país.</p>
+            </div>
+            <div class="service-item">
+                <h3>Almacenamiento</h3>
+                <p>Almacén adecuado para sus mercancías, con monitoreo constante.</p>
+            </div>
+            <div class="service-item">
+                <h3>Envíos Internacionales</h3>
+                <p>Logística global con soluciones adaptadas a sus necesidades.</p>
+            </div>
+        </div>
+    </section>
 
+    <!-- Formulario de contacto -->
+    <section id="contact">
+        <h2>Contacto</h2>
+        <form action="#">
+            <input type="text" placeholder="Nombre" required>
+            <input type="email" placeholder="Correo Electrónico" required>
+            <textarea placeholder="Mensaje" required></textarea>
+            <button type="submit" class="btn-primary">Enviar</button>
+        </form>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2024 Medli Logistics. Todos los derechos reservados.</p>
+    </footer>
 </body>
 </html>
