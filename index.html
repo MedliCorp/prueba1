@@ -5,13 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Medli Logistics</title>
     <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
-    
+    <!-- Encabezado -->
     <header>
         <div class="logo">
-            <img src="logo.png" alt="Medli Logistics">
+            <img src="img/Logo.png" alt="Medli Logistics">
+        </div>
+        <div class="contact-info">
+            <div class="contact-item">
+                <img src="img/mail_email_message_electronic_online_web_icon-icons.com_59986.png" alt="Email Icon">
+                <span>heidi.jimenez@medlilogistics.com.mx</span>
+            </div>
+            <div class="contact-item">
+                <img src="img/whatsapp_chat_message_communication_icon_193327.png" alt="WhatsApp Icon">
+                <span>56 2152 7393</span>
+            </div>
+            <div class="contact-item">
+                <img src="img/phone-volume_icon-icons.com_56474.png" alt="Phone Icon">
+                <span>55 5441 2748</span>
+            </div>
         </div>
         <nav>
             <ul>
@@ -22,9 +35,15 @@
         </nav>
     </header>
 
-    <!-- Sección principal -->
+    <!-- Sección principal con video de fondo -->
     <section id="home">
-        <div class="main-banner">
+        <div class="video-background">
+            <video autoplay muted loop id="background-video">
+                <source src="videos/6169116-uhd_3840_2160_25fps.mp4" type="video/mp4">
+                Tu navegador no soporta videos HTML5.
+            </video>
+        </div>
+        <div class="content">
             <h1>Medli Logistics</h1>
             <p>"Cada trayecto una entrega segura y confiable"</p>
             <a href="#contact" class="btn-primary">Contáctanos</a>
@@ -50,7 +69,7 @@
         </div>
     </section>
 
-    <!-- Formulario de contacto -->
+    <!-- Sección de contacto -->
     <section id="contact">
         <h2>Contacto</h2>
         <form action="#">

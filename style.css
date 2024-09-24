@@ -1,3 +1,24 @@
+/* Video de fondo */
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1; /* Para que el video esté detrás del contenido */
+}
+
+html, body {
+    overflow-x: hidden; /* Oculta el desbordamiento horizontal */
+}
+
+#background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que el video cubra toda el área */
+}
+
 /* Estilos generales */
 body {
     font-family: Arial, sans-serif;
@@ -7,19 +28,42 @@ body {
     color: #333;
 }
 
-/* Encabezado */
 header {
-    background-color: #005f73;
+    background-color: rgba(0, 95, 115, 0.8); 
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
+    position: fixed; /* Para que se superponga al video */
+    width: 100%;
+    z-index: 2;
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
 }
 
+/* Logo */
 header .logo img {
     max-width: 150px;
 }
 
+/* Contacto */
+.contact-info {
+    display: flex;
+    gap: 2rem; /* Espacio entre los ítems de contacto */
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    color: white;
+    gap: 0.5rem; /* Espacio entre el ícono y el texto */
+}
+
+.contact-item img {
+    width: 24px; /* Ajuste del tamaño de los íconos */
+    height: auto;
+}
+
+/* Navegación */
 nav ul {
     list-style: none;
     display: flex;
@@ -43,26 +87,27 @@ nav ul li a:hover {
 }
 
 /* Sección principal */
-.main-banner {
-    background-image: url('logistics-background.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 80vh;
+#home {
+    position: relative;
+    height: 100vh;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     color: white;
-    padding: 0 20px;
 }
 
-.main-banner h1 {
+#home .content {
+    position: relative;
+    z-index: 1; /* Para que el contenido esté encima del video */
+}
+
+#home h1 {
     font-size: 3rem;
     margin: 0;
 }
 
-.main-banner p {
+#home p {
     font-size: 1.2rem;
 }
 
@@ -95,7 +140,7 @@ nav ul li a:hover {
 .service-container {
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap; /* Flexbox para hacer que las tarjetas se acomoden en varias filas si es necesario */
+    flex-wrap: wrap;
 }
 
 .service-item {
@@ -152,63 +197,42 @@ footer {
     padding: 1rem;
 }
 
-/* Media Queries para pantallas pequeñas */
+/* Responsividad */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
         text-align: center;
     }
 
+    /* Ajuste de logo y contacto en columna */
+    .contact-info {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
     nav ul {
         flex-direction: column;
         align-items: center;
+        margin-top: 1rem;
     }
 
     nav ul li {
         margin-left: 0;
-        margin-top: 1rem;
-    }
-
-    .main-banner {
-        height: 60vh;
-    }
-
-    .main-banner h1 {
-        font-size: 2.5rem;
-    }
-
-    .service-container {
-        flex-direction: column; /* Apilar los servicios en una sola columna en pantallas pequeñas */
-    }
-
-    .service-item {
-        width: 80%; /* Aumentar el ancho de los elementos en pantallas más pequeñas */
     }
 }
 
-/* Media Queries para pantallas muy pequeñas (móviles) */
 @media (max-width: 480px) {
     header {
         padding: 1rem;
     }
 
+    /* Texto más pequeño en pantallas muy pequeñas */
+    .contact-item span {
+        font-size: 0.9rem;
+    }
+
     nav ul li a {
         font-size: 1rem;
-    }
-
-    .main-banner h1 {
-        font-size: 2rem;
-    }
-
-    .main-banner p {
-        font-size: 1rem;
-    }
-
-    .service-item {
-        width: 100%; /* Aumentar el ancho al 100% en pantallas muy pequeñas */
-    }
-
-    #contact input, #contact textarea {
-        width: 100%; /* Asegurar que los campos de formulario ocupen el 100% del ancho disponible */
     }
 }
