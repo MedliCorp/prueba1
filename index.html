@@ -84,7 +84,7 @@
         </div>
         <div class="about-card">
             <h3>Experiencia</h3>
-            <p>Contamos con gran experiencia con todo tipo de entregas nacionales. Hemos treansportado producto para empresas gubernamentales donde la calidad, la atención y el compromiso han brillado</p>
+            <p>Contamos con gran experiencia con todo tipo de entregas nacionales. Hemos transportado producto para empresas gubernamentales donde la calidad, la atención y el compromiso han brillado</p>
         </div>
         <div class="about-card">
             <h3>Sostenibilidad</h3>
@@ -98,23 +98,39 @@
 </section>
 
 
+
     <!-- Sección de contacto -->
     <section id="contact">
         <h2>Contacto</h2>
-        <form action="#">
-            <input type="text" placeholder="Nombre" required>
-            <input type="email" placeholder="Correo Electrónico" required>
-            <textarea placeholder="Mensaje" required></textarea>
+        <form action="https://formsubmit.co/darioemiliano181196@gmail.com" method="post">
+            <input type="text" placeholder="Nombre" required name="name">
+            <input type="email" placeholder="Correo Electrónico" required name="email">
+            <textarea placeholder="Mensaje" required name="subject"></textarea>
             <button type="submit" class="btn-primary">Enviar</button>
+            <input type="hidden" name="_next" value="https://medlilogistics.com.mx/">
+            <input type="hidden" name="_captcha" value="false">
+
         </form>
+        <h2>Ubicación</h2>
+        <iframe src="https://www.google.com/maps/d/embed?mid=1HXuR10CXmFjqOeS4CslCe9aGnTSBbQQ&ehbc=2E312F" width="640" height="480"></iframe>
+       
     </section>
 
     <!-- Pie de página -->
     <footer>
         <p>&copy; 2024 Medli Logistics. Todos los derechos reservados.</p>
+       
     </footer>
 </body>
 <script>
-    
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Evita el envío automático
+
+        // Muestra la alerta
+        alert("¡Gracias! Tu mensaje ha sido enviado correctamente.");
+
+
+        this.submit(); // Esto envía el formulario después de la alerta
+    });
 </script>
 </html>

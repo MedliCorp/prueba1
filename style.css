@@ -235,6 +235,9 @@ footer {
     nav ul li a {
         font-size: 1rem;
     }
+    iframe{
+        max-width: 75%;
+    }
 }
 /* Nueva sección: Sobre Nosotros */
 #about {
@@ -307,3 +310,4 @@ footer {
         font-size: 0.9rem;
     }
 }
+/* Sección de ubicación */
